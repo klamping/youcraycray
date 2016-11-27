@@ -108,7 +108,7 @@
       90% {color: #8000ff;}
       100% {color: #ff0080;}
     }
-    .twitter-share-button {
+    .social {
       position: absolute;
       top: 1em;
       left: 1em;
@@ -117,6 +117,10 @@
 </head>
 
 <body>
+  <audio autoplay loop>
+    <source src="./162453__milton__taratata.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
   <div class="cray-container">
     <h1><span class="char1">Y</span><span class="char2">o</span><span class="char3">u</span><span class="char4"> </span><span class="char5">s</span><span class="char6">o</span><span class="char7"> </span><span class="char8">c</span><span class="char9">r</span><span class="char10">a</span><span class="char11">y</span><span class="char12"> </span><span class="char13">c</span><span class="char14">r</span><span class="char15">a</span><span class="char16">y</span></h1>
     <div class="gif-cray">
@@ -125,7 +129,9 @@
     <button class="up-yours">Up the cray</button>
   </div>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+  <div class="social">
+    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+  </div>
   <script>
     document.querySelector('.up-yours').addEventListener("click", function () {
       var newCray = document.querySelector("#original").cloneNode(true);
