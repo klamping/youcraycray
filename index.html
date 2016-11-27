@@ -21,22 +21,9 @@
     }
     .cray-container {
       display: flex;
-      justify-content: center;
       align-items: center;
       flex-direction: column;
       height: 100%;
-    }
-    .gif-cray {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-    .gif-cray img {
-      flex: 1;
-      max-width: 325px;
-      min-width: 0;
     }
     h1,
     h1 span {
@@ -120,46 +107,58 @@
     }
     .gif-cray {
       padding: 2em 0;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 280px;
+    }
+    .gif-cray span {
+      display: inline-block;
+      flex: 1;
     }
     .gif-cray img {
+      max-width: 100%; /*or width: 100%; if so the above line won't be required */
+      height: auto;
       animation: animationFrames linear 1s infinite;
       transform-origin: 50% 50%;
-      margin: 0 2em;
+      min-width: 148px;
     }
 
 @keyframes animationFrames{
   0% {
-    transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
+    transform:  rotate(0deg) scaleX(0.8) scaleY(0.8) ;
   }
   10% {
-    transform:  rotate(-3deg) scaleX(0.80) scaleY(0.80) ;
+    transform:  rotate(-3deg) scaleX(0.60) scaleY(0.60) ;
   }
   20% {
-    transform:  rotate(-3deg) scaleX(0.80) scaleY(0.80) ;
+    transform:  rotate(-3deg) scaleX(0.60) scaleY(0.60) ;
   }
   30% {
-    transform:  rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+    transform:  rotate(3deg) scaleX(1.00) scaleY(1.00) ;
   }
   40% {
-    transform:  rotate(-3deg) scaleX(1.20) scaleY(1.20) ;
+    transform:  rotate(-3deg) scaleX(1.00) scaleY(1.00) ;
   }
   50% {
-    transform:  rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+    transform:  rotate(3deg) scaleX(1.00) scaleY(1.00) ;
   }
   60% {
-    transform:  rotate(-3deg) scaleX(1.20) scaleY(1.20) ;
+    transform:  rotate(-3deg) scaleX(1.00) scaleY(1.00) ;
   }
   70% {
-    transform:  rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+    transform:  rotate(3deg) scaleX(1.00) scaleY(1.00) ;
   }
   80% {
-    transform:  rotate(-3deg) scaleX(1.20) scaleY(1.20) ;
+    transform:  rotate(-3deg) scaleX(1.00) scaleY(1.00) ;
   }
   90% {
-    transform:  rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+    transform:  rotate(3deg) scaleX(1.00) scaleY(1.00) ;
   }
   100% {
-    transform:  rotate(0deg) scaleX(1.20) scaleY(1.20) ;
+    transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
   }
 }
 
@@ -174,19 +173,27 @@
   </audio>
   <div class="cray-container">
     <h1><span class="char1">Y</span><span class="char2">o</span><span class="char3">u</span><span class="char4"> </span><span class="char5">s</span><span class="char6">o</span><span class="char7"> </span><span class="char8">c</span><span class="char9">r</span><span class="char10">a</span><span class="char11">y</span><span class="char12"> </span><span class="char13">c</span><span class="char14">r</span><span class="char15">a</span><span class="char16">y</span></h1>
-    <div class="gif-cray">
-      <img src="giphy.gif" alt="" id="original">
-    </div>
     <button class="up-yours">Up the cray</button>
+    <div class="gif-cray">
+      <span id="original">
+        <img src="giphy.gif" alt="">
+      </span>
+    </div>
   </div>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <div class="social">
     <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
   </div>
   <script>
+    var crayLevel = 0;
     document.querySelector('.up-yours').addEventListener("click", function () {
       var newCray = document.querySelector("#original").cloneNode(true);
+      newCray.id="";
       document.querySelector('.gif-cray').appendChild(newCray);
+      crayLevel++;
+      if (crayLevel > 50) {
+        alert('okay, that\'s just to much cray');
+      }
     });
   </script>
   <!-- Piwik -->
