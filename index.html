@@ -10,6 +10,8 @@
   <meta property="og:title" content="Listen up." />
   <meta property="og:image" content="http://youcraycray.com/crayfish.png" />
   <meta property="og:description" content="You cray cray" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -37,11 +39,51 @@
       min-height: 100vh;
       text-align: center;
     }
+    .cray-a {
+      display: flex;
+      flex-wrap: wrap;
+    }
     .cray-container {
       display: flex;
+      flex: 10;
       align-items: center;
       flex-direction: column;
       height: 100%;
+    }
+    .sweet-merch {
+      display: flex;
+      flex: 1 1 60px;
+      flex-direction: column;
+      padding: 0 10px;
+      margin-left: 1em;
+      border: dashed #CD0000;
+      border-width: 0 0 0 1px;
+      color: #CD0000;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .sweet-merch h2 {
+      margin: 0 0 1em;
+      width: 100%;
+    }
+    .sweet-merch a {
+      margin-bottom: 1em;
+    }
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen and (max-width : 800px) {
+      .cray-a {
+        flex-direction: column;
+      }
+      .sweet-merch {
+        flex-direction: row;
+        border-width: 1px 0 0;
+        padding: 1em;
+        justify-content: center;
+      }
+      .sweet-merch a {
+        margin: 1em;
+        flex: 1;
+      }
     }
     h1,
     h1 span {
@@ -122,6 +164,15 @@
       font-size: 1.2em;
       padding: .5em;
       margin-top: .5em;
+      border: 1px outset #CD0000;
+      background: #fff1f0;
+      color: #C00;
+      cursor: pointer;
+    }
+    button:active {
+      border: 1px inset #CD0000;
+      background: #C00;
+      color: #fff1f0;
     }
     .gif-cray {
       padding: 2em 0;
@@ -189,13 +240,23 @@
     <source src="./162453__milton__taratata.wav" type="audio/wav">
     Your browser does not support the audio element.
   </audio>
-  <div class="cray-container">
-    <h1><span class="char1">Y</span><span class="char2">o</span><span class="char3">u</span><span class="char4"> </span><span class="char5">s</span><span class="char6">o</span><span class="char7"> </span><span class="char8">c</span><span class="char9">r</span><span class="char10">a</span><span class="char11">y</span><span class="char12"> </span><span class="char13">c</span><span class="char14">r</span><span class="char15">a</span><span class="char16">y</span></h1>
-    <button class="up-yours">Up the cray</button>
-    <div class="gif-cray">
-      <span id="original">
-        <img src="giphy.gif" alt="">
-      </span>
+  <div class="cray-a">
+    <div class="cray-container">
+      <h1><span class="char1">Y</span><span class="char2">o</span><span class="char3">u</span><span class="char4"> </span><span class="char5">s</span><span class="char6">o</span><span class="char7"> </span><span class="char8">c</span><span class="char9">r</span><span class="char10">a</span><span class="char11">y</span><span class="char12"> </span><span class="char13">c</span><span class="char14">r</span><span class="char15">a</span><span class="char16">y</span></h1>
+      <button class="up-yours">Up the cray</button>
+      <div class="gif-cray">
+        <span id="original">
+          <img src="giphy.gif" alt="">
+        </span>
+      </div>
+    </div>
+    <div class="sweet-merch">
+      <h2>Grab some cray merch</h2>
+      <a href="https://www.amazon.com/Jacobson-Hat-Company-Lobster-Adult/dp/B001E2HQT6/ref=as_li_ss_il?ie=UTF8&qid=1481219595&sr=8-18&keywords=crawfish&linkCode=li1&tag=cibomediserv-20&linkId=9eb0f23a8e0df5ec11766bc8a54b3de0" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001E2HQT6&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=cibomediserv-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=cibomediserv-20&l=li1&o=1&a=B001E2HQT6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      <a href="https://www.amazon.com/Inflatable-Red-Lobster-Inch-Each/dp/B000R4Q28S/ref=as_li_ss_il?ie=UTF8&qid=1481219635&sr=8-64&keywords=crawfish&linkCode=li1&tag=cibomediserv-20&linkId=6c87a0343dc34f42fc6e7a51744a9fae" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000R4Q28S&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=cibomediserv-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=cibomediserv-20&l=li1&o=1&a=B000R4Q28S" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      <a href="https://www.amazon.com/Pack-Disposable-Plastic-Lobster-Bibs/dp/B010CGCI0G/ref=as_li_ss_il?ie=UTF8&qid=1481219595&sr=8-34-spons&keywords=crawfish&psc=1&linkCode=li2&tag=cibomediserv-20&linkId=61bb3e9e1ef06d7b57c2c579811d1956" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B010CGCI0G&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=cibomediserv-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=cibomediserv-20&l=li2&o=1&a=B010CGCI0G" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      <a href="https://www.amazon.com/Crawfish-Lobster-Beads-12-count/dp/B001RQTNJ0/ref=as_li_ss_il?ie=UTF8&qid=1481219563&sr=8-7&keywords=crawfish&linkCode=li2&tag=cibomediserv-20&linkId=14a9875d3918f5568b609304d7ed9293" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001RQTNJ0&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=cibomediserv-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=cibomediserv-20&l=li2&o=1&a=B001RQTNJ0" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      <a href="https://www.amazon.com/Beistle-58026-Crawfish-Plates-Pkg/dp/B00745I9WU/ref=as_li_ss_il?ie=UTF8&qid=1481219618&sr=8-39&keywords=crawfish&linkCode=li2&tag=cibomediserv-20&linkId=1ec0039d95e56a72f8292225e1877e04" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00745I9WU&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=cibomediserv-20" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=cibomediserv-20&l=li2&o=1&a=B00745I9WU" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
     </div>
   </div>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
