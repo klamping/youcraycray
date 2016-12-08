@@ -190,8 +190,10 @@
     crayBtn.addEventListener("click", function () {
       if (crayLevel > 50) {
         alert('okay, that\'s just too much cray');
+        _paq.push(['trackEvent', 'Click', 'UpCray', 'Limit']);
         return false;
       }
+      _paq.push(['trackEvent', 'Click', 'UpCray', 'Up', crayLevel]);
       var newCray = document.querySelector("#original").cloneNode(true);
       newCray.id="";
       document.querySelector('.gif-cray').appendChild(newCray);
