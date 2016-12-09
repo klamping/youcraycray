@@ -268,11 +268,36 @@
   </div>
   <script>
     var crayLevel = 0;
+    var crayLimits = 0;
     var crayBtn = document.querySelector('.up-yours');
+    var crayMessages = [
+      "okay, that's just too much cray",
+      "really now, that's enough",
+      "I'm starting to think you're a little cray cray",
+      "clicked it again huh, yeah, you're definitely cray cray",
+      "okay cray cray, you can stop now",
+      "really, still clicking it huh",
+      "although, I'm the one still responding to you",
+      "maybe I'm a little cray",
+      "speaking of, how about that cray hat?",
+      "or that cray lobster bib?",
+      "did you know crayfish and lobsters are closely related?",
+      "so even though they're not the same species, it's pretty darn close",
+      "and when you search 'crayfish' on amazon, you get a lot of lobster results",
+      "even some rock lobster ones",
+      "rock lobster"
+    ]
     crayBtn.addEventListener("click", function () {
-      if (crayLevel > 50) {
-        alert('okay, that\'s just too much cray');
-        _paq.push(['trackEvent', 'Click', 'UpCray', 'Limit']);
+      if (crayLevel > 1) {
+        if (crayLimits < crayMessages.length) {
+          alert(crayMessages[crayLimits]);
+          crayLimits++;
+
+          _paq.push(['trackEvent', 'Click', 'UpCray', 'Limit', crayLimits]);
+        } else {
+          window.location.href = "https://www.youtube.com/watch?v=KDR_xbUZ4tM"
+        }
+
         return false;
       }
       var newCray = document.querySelector("#original").cloneNode(true);
